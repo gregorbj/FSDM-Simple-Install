@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Create data frame of selected scenarios and concepts to plot...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for formatOutputData {FSDM}"><tr><td>formatOutputData {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Create data frame of selected scenarios and concepts to plot and save</h2>
+
+<h3>Description</h3>
+
+<p><code>formatOutputData</code> makes a data frame of the summary results for selected
+scenarios and selected concepts.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+formatOutputData(ModelDir, ModelName, Sc, Vn)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string representation of the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>Sc</code></td>
+<td>
+<p>a vector of the names of scenarios to include.</p>
+</td></tr>
+<tr valign="top"><td><code>Vn</code></td>
+<td>
+<p>the variable names for the concepts to include.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function creates a data frame of model results for selected scenarios
+and selected concepts. The data frame is in 'flat' format where values are
+in one column and the corresponding concept names, scenario names, and
+iterations are in separate columns.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A data frame having columns identifying the scenario, concept,
+iteration, scaled values, and rescaled values.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

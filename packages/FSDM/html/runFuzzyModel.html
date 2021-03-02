@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Run the fuzzy model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for runFuzzyModel {FSDM}"><tr><td>runFuzzyModel {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Run the fuzzy model</h2>
+
+<h3>Description</h3>
+
+<p><code>runFuzzyModel</code> runs a fuzzy model given scenario inputs for starting
+values and starting changes.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+runFuzzyModel(M, S, Type)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>M</code></td>
+<td>
+<p>a fuzzy model created using the create FuzzyModel function.</p>
+</td></tr>
+<tr valign="top"><td><code>S</code></td>
+<td>
+<p>a scenario created using the loadScenario function.</p>
+</td></tr>
+<tr valign="top"><td><code>Type</code></td>
+<td>
+<p>a string that may have either the value 'Linear' or 'Exponential'
+which identifies whether independent concepts should change linearly or
+exponentially.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function runs a FCM model that was created using the createFuzzyModel
+function with a scenarios that was created using the createFuzzyScenario
+function. The function uses a nested loop to calculate final values. The
+outer loop applies the starting changes in small increments so that the
+changes appropriate for applying 'point elasticities'. The inner loop
+iterates the model until a stable equilibrium result is achieved for each
+increment.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A list containing 3 components:
+Summary - a matrix containing the final relative concept values (e.g.
+0 - 100) for each concept and increment;
+ScaleSummary - a matrix containing the final concept values in the nominal
+measurement units for each concept and increment;
+Full - the relative concept values (e.g. 0 - 100) for each increment and
+each iteration.
+Message - a string containing a final completion message identifying whether
+the model run completed successfully and some information about the run.
+Success - a logical vector identifying whether the solution converged on each
+increment.
+NumIter - a numeric vector identifying the number of iterations to model
+convergence for each increment.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

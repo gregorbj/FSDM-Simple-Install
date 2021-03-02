@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Calculate changes to concepts being varied in scenario</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for calcInitChange {FSDM}"><tr><td>calcInitChange {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Calculate changes to concepts being varied in scenario</h2>
+
+<h3>Description</h3>
+
+<p><code>calcInitChange</code> calculates changes to concepts being varied in a
+scenario
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+calcInitChange(V_Cn, TargetV_Cn, RemIncr, Type = "Exponential")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>V_Cn</code></td>
+<td>
+<p>a numeric vector identifying the values of concepts</p>
+</td></tr>
+<tr valign="top"><td><code>TargetV_Cn</code></td>
+<td>
+<p>a numeric vector identifying the target values of concepts
+for the scenario.</p>
+</td></tr>
+<tr valign="top"><td><code>RemIncr</code></td>
+<td>
+<p>a number identifying the remaining number of increments to
+complete the scenario.</p>
+</td></tr>
+<tr valign="top"><td><code>Type</code></td>
+<td>
+<p>a string identifying the growth function. May be either
+'Exponential' or 'Linear'.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>In a scenario, the values of one or a few concepts are changed and then the
+model is run to calculate a new equilibrium state of concept values. The
+changes to these 'independent' concepts are made in small increments to model
+assumptions about how the values will change over time. In each increment,
+the change for the increment is calculated from the concept values of the
+previous increment, the scenario target concept values, and the number of
+remaining increments. Calculation of the increments assumes that change will
+occur at a constant exponential rate over the course of the remaining
+increments.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list having 2 named components. Ratio is the ratio of change of the
+'independent' concepts. Values is a numeric vector of the value of concepts
+after 'independent' concepts have been incremented.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Initialize a new scenario.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for initializeNewScenario {FSDM}"><tr><td>initializeNewScenario {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Initialize a new scenario.</h2>
+
+<h3>Description</h3>
+
+<p><code>initializeNewScenario</code> initializes a new scenario by creating a
+directory with the scenario name and returns a list containing scenario
+status, scenario values, and number of growth increments components.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+initializeNewScenario(ModelsDir, ModelName, ScenarioName, Concepts_df,
+  NumIncr)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string representation of the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>ScenarioName</code></td>
+<td>
+<p>a string representation of the scenario name.</p>
+</td></tr>
+<tr valign="top"><td><code>Concepts_df</code></td>
+<td>
+<p>a data frame containing the concept data.</p>
+</td></tr>
+<tr valign="top"><td><code>NumIncr</code></td>
+<td>
+<p>an integer identifying the number of growth increments for
+the scenario.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function initializes a new scenario with the given scenario name. It
+does this by creating a directory with the scenario name and a data frame
+to store the scenario data. This list is returned and the components are
+used in the scenario reactive object. The components are also saved in the
+scenario directory in JSON format.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list containing a status list and a scenario values data frame.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

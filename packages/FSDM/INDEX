@@ -1,0 +1,47 @@
+calcEffects             Calculate updated concept values by applying
+                        model relations to a set of concept values and
+                        changes to those values.
+calcInitChange          Calculate changes to concepts being varied in
+                        scenario
+calcPosteriorRatio      Calculate change ratio of posterior concept
+                        value
+conformScenario         Modify a scenario to conform with a changed
+                        model
+copyDemoModels          Copy demo model files from FSDM package
+createFuzzyModel        Create fuzzy model
+createFuzzyScenario     Create a scenario object to be modeled
+formatConceptTable      Formats a concept table to be displayed in the
+                        GUI.
+formatOutputData        Create data frame of selected scenarios and
+                        concepts to plot and save
+getEffects              Get data on effect relationships of a causal
+                        concept
+idScenWithOutputs       Identify scenarios that have model outputs
+initRelationsEntry      Initialize a initial relations entry for a new
+                        concept
+initializeCopyModel     Initialize a new model by copying an existing
+                        model.
+initializeCopyScenario
+                        Initialize a new scenario by copying an
+                        existing scenario.
+initializeNewModel      Initialize a new model.
+initializeNewScenario   Initialize a new scenario.
+listScenarios           Creates a list of scenarios and whether
+                        validated.
+loadModelConcepts       Load the concept file for a model.
+loadModelRelations      Load the relations file for a model.
+loadModelStatus         Load the model status file for a model.
+loadScenario            Loads the files for a scenario.
+makeAdjacencyMatrix     Creates an adjacency matrix from an FSDM
+                        relations list
+makeDot                 Create a DOT file for GraphViz
+mapRelations            Plot relationships
+rescale                 Rescale value
+runFuzzyModel           Run the fuzzy model
+runLogicLab             Run the Logic Laboratory
+saveModel               Saves all the model components as JSON files.
+saveScenario            Saves all the scenario components as JSON
+                        files.
+solveModel              Solve the model in response to initial concept
+                        changes
+validateScenario        Validates scenario with model.

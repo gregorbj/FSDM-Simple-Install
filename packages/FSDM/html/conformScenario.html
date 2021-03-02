@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Modify a scenario to conform with a changed model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for conformScenario {FSDM}"><tr><td>conformScenario {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Modify a scenario to conform with a changed model</h2>
+
+<h3>Description</h3>
+
+<p><code>conformScenario</code> modifies an existing scenario definition so that it
+conforms to the current model definition.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+conformScenario(ConceptVars_, ScenarioValues_df)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ConceptVars_</code></td>
+<td>
+<p>a string vector of the variable names of model concepts</p>
+</td></tr>
+<tr valign="top"><td><code>ScenarioValues_df</code></td>
+<td>
+<p>a data frame of scenario concept values</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function modifies a scenario definition so that it conforms to the
+the current model definition. It does this my removing entries for concepts
+that are not part of the model and by adding &quot;blank&quot; entries for concepts
+that are in the model but not in the scenario. The function is designed to be
+called by the 'initializeCopyScenario' function and the 'loadScenario'
+function. Note that the function does not check whether the values for
+concepts are consistent with the concept definition. The user needs to check
+consistency of values and validation will check for inconsistencies as well.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a data frame of scenario concept values that is consistent with the
+model concepts
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

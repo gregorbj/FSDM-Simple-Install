@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Saves all the scenario components as JSON files.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for saveScenario {FSDM}"><tr><td>saveScenario {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Saves all the scenario components as JSON files.</h2>
+
+<h3>Description</h3>
+
+<p><code>saveScenario</code> saves the scenario status and values as JSON files.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+saveScenario(ModelsDir, ScenarioData)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which</p>
+</td></tr>
+<tr valign="top"><td><code>ScenarioData</code></td>
+<td>
+<p>a list having status and values components.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function saves the scenario status and values as JSON files in the
+scenario directory for the model. The status information is saved in the
+status.json file and the scenario values are saved in the scenarios.json
+file.
+</p>
+
+
+<h3>Value</h3>
+
+<p>no return value. Has side effect of saving the scenario status list
+and values data frame.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

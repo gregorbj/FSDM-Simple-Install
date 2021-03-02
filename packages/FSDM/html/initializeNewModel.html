@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Initialize a new model.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for initializeNewModel {FSDM}"><tr><td>initializeNewModel {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Initialize a new model.</h2>
+
+<h3>Description</h3>
+
+<p><code>initializeNewModel</code> initializes a new model by creating a directory
+with the model name. Creates and saves a model status list.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+initializeNewModel(ModelsDir, ModelName, Author)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which
+the model is located.</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string identifying the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>Author</code></td>
+<td>
+<p>a string identifying the author's name.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function initializes a new model with the given model name. It does this
+by creating a directory with the model name and a list to store the model
+status. This list is saved in the model directory in JSON format and is
+also returned by the function. The status list contains the name of the
+model, the parent (none), the date and time is was created, and the date
+and time it was last edited (same as creation time).
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list containing values for name, parent, created, and lastedit.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

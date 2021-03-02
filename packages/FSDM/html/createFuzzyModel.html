@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Create fuzzy model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for createFuzzyModel {FSDM}"><tr><td>createFuzzyModel {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Create fuzzy model</h2>
+
+<h3>Description</h3>
+
+<p><code>createFuzzyModel</code> creates the representation of a FSDM model as an R
+object from JSON-formatted text files.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+createFuzzyModel(Dir, Vals = c(VL = 0.01, L = 0.2, ML = 0.35, M = 0.5, MH
+  = 0.67, H = 0.85, VH = 1), Signs = c(Positive = 1, Negative = -1))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Dir</code></td>
+<td>
+<p>a string identifying the path to the directory where the
+JSON-formatted text files that specify a model are located.</p>
+</td></tr>
+<tr valign="top"><td><code>Vals</code></td>
+<td>
+<p>a named numeric vector that relates linguistic relationships
+to numeric values.</p>
+</td></tr>
+<tr valign="top"><td><code>Signs</code></td>
+<td>
+<p>a named numeric vector which associates values with descriptions
+of relationship signs. Default is c(Positive = 1, Negative = -1).</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function reads in JSON-formatted text files which contains all of the
+information needed to specify a FSDM model and makes an object (a list) which
+contains components in the data structures needed to apply the FSDM functions
+to compute an output given a scenario which specifies initial conditions.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A list containing the following components:
+Cn = a string vector containing the names of the model concepts;
+Group = a named string vector containing the group name for each concept;
+Relates = a numeric matrix whose dimensions are equal to the number of
+concepts and values are the numeric weights in the model;
+Labels = a string matrix, with the same dimensions as Relates, which contains
+the fuzzy relationships between concepts (e.g. low, medium, high);
+ValueRange = a data frame which provides the minimum and maximum values of
+each concept.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

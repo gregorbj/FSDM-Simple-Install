@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Create a DOT file for GraphViz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for makeDot {FSDM}"><tr><td>makeDot {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Create a DOT file for GraphViz</h2>
+
+<h3>Description</h3>
+
+<p><code>makeDotFile</code> create and save a dot file to be displayed by GraphViz
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+makeDot(Relations_ls, Concepts_df, RowGroup = "All", ColGroup = "All",
+  orientation = "Portrait", rankdir = "Top-to-Bottom", shape = "box",
+  Show = "label")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Relations_ls</code></td>
+<td>
+<p>a list of model relations.</p>
+</td></tr>
+<tr valign="top"><td><code>Concepts_df</code></td>
+<td>
+<p>a data frame with model concepts.</p>
+</td></tr>
+<tr valign="top"><td><code>RowGroup</code></td>
+<td>
+<p>a string identifying the names of the name of the group that
+selects rows from the relationship table to plot. The default 'All' selects
+all the rows.</p>
+</td></tr>
+<tr valign="top"><td><code>ColGroup</code></td>
+<td>
+<p>a string identifying the name of the group that selects
+columns from the relationship table to plot. The default 'All' selects all
+the columns.</p>
+</td></tr>
+<tr valign="top"><td><code>orientation</code></td>
+<td>
+<p>a string identifying the GraphViz layout orientation
+('Portrait' or 'Landscape').</p>
+</td></tr>
+<tr valign="top"><td><code>rankdir</code></td>
+<td>
+<p>a string identifying the graph orientation:
+'TB' for top to bottom, 'LR' for left to right.</p>
+</td></tr>
+<tr valign="top"><td><code>shape</code></td>
+<td>
+<p>a string identifying the shape of the graph nodes (e.g. 'box').</p>
+</td></tr>
+<tr valign="top"><td><code>Show</code></td>
+<td>
+<p>a string identifying how to label the edges. The default value
+&quot;label&quot; results in showing the fuzzy label (e.g. VL, L, M, H, VH). The
+alternative, &quot;value&quot;, results in showing the equivalent numeric value.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function writes out a dot file to be rendered using GraphViz.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A string specification of a DOT.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Initialize a new scenario by copying an existing scenario.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for initializeCopyScenario {FSDM}"><tr><td>initializeCopyScenario {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Initialize a new scenario by copying an existing scenario.</h2>
+
+<h3>Description</h3>
+
+<p><code>initializeCopyScenario</code> initializes a new scenario by creating a
+directory with the scenario name and copying the contents of an existing
+scenario into that directory.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+initializeCopyScenario(ModelsDir, ModelName, ConceptVars_, ScenarioName,
+  CopyScenarioName, NumIncr)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which
+the model is located.</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string representation of the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>ConceptVars_</code></td>
+<td>
+<p>a string vector of the model concept variable names.</p>
+</td></tr>
+<tr valign="top"><td><code>ScenarioName</code></td>
+<td>
+<p>a string representation of the new scenario name.</p>
+</td></tr>
+<tr valign="top"><td><code>CopyScenarioName</code></td>
+<td>
+<p>a string representation of the name of the scenario
+to copy.</p>
+</td></tr>
+<tr valign="top"><td><code>NumIncr</code></td>
+<td>
+<p>an integer identifying the number of growth increments for the
+scenario.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function initializes a new scenario with the given scenario name from an
+existing scenario. It does this by creating a directory with the scenario
+name and copying the scenario files for an existing scenario into it. It
+creates a new scenario status list which identifies the name of the new
+scenario and the name of the parent scenario it is a copy of. It also
+identifies the number of growth increments in the new scenario.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list containing a status list and a scenario values data frame.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

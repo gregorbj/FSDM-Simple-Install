@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solve the model in response to initial concept changes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for solveModel {FSDM}"><tr><td>solveModel {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solve the model in response to initial concept changes</h2>
+
+<h3>Description</h3>
+
+<p><code>solveModel</code> iterates model to either find an equilibrium solution or
+identify if there is no equilibrium
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+solveModel(V_Cn, TargetV_Cn, RemIncr, M, Type, MaxIter = 100,
+  ThresholdChg = 0.01)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>V_Cn</code></td>
+<td>
+<p>a numeric vector identifying the values of concepts</p>
+</td></tr>
+<tr valign="top"><td><code>TargetV_Cn</code></td>
+<td>
+<p>a numeric vector identifying the target values of concepts
+for the scenario</p>
+</td></tr>
+<tr valign="top"><td><code>RemIncr</code></td>
+<td>
+<p>the remaining number of increments to complete the scenario</p>
+</td></tr>
+<tr valign="top"><td><code>M</code></td>
+<td>
+<p>a list containing the FSDM model components</p>
+</td></tr>
+<tr valign="top"><td><code>Type</code></td>
+<td>
+<p>a string identifying the growth function. May be either
+'Exponential' or 'Linear'.</p>
+</td></tr>
+<tr valign="top"><td><code>MaxIter</code></td>
+<td>
+<p>a number identifying the maximum number of iterations</p>
+</td></tr>
+<tr valign="top"><td><code>ThresholdChg</code></td>
+<td>
+<p>a number identifying the threshold for identifying whether
+equilibrium has been found</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function solves a model for a given set of initial changes to concept.
+It iteratively runs the calcEffects function and with each iteration checks
+whether the resulting values are very nearly equal to the concept values in
+the previous iteration. If so, iteration is stopped. If the maximum number of
+iterations occurs without finding an equilibrium the iteration is also
+stopped. The function returns the result of the iteration and an indicator of
+whether an equilibrium value has been found.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list having 3 named components. Success is a logical identifying
+whether an equilibrium solution has been found. Values is a numeric vector
+identifying the values of concepts at the end. AllValues is a matrix
+identifying the values of concepts at each iteration where columns are the
+concepts and rows are the iterations.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

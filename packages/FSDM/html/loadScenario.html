@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Loads the files for a scenario.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for loadScenario {FSDM}"><tr><td>loadScenario {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Loads the files for a scenario.</h2>
+
+<h3>Description</h3>
+
+<p><code>loadScenario</code> reads the files that contain scenario information
+and returns a list containing scenario status, values, and increments
+information.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+loadScenario(ModelsDir, ModelName, ConceptVars_, ScenarioFileName)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string representation of the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>ConceptVars_</code></td>
+<td>
+<p>a string vector of the model concept variable names.</p>
+</td></tr>
+<tr valign="top"><td><code>ScenarioFileName</code></td>
+<td>
+<p>a string representation of the scenario name.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function reads the scenario status file and scenario file for a
+specified scenario and returns a list whose components are a list containing
+the scenario status information, a data frame containing the scenario
+values information, and an integer identifying the number of growth
+increments.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list containing a status list, a scenario values data frame, and
+the number of growth increments for the scenario.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

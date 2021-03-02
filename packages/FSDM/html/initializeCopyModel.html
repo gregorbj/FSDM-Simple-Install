@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Initialize a new model by copying an existing model.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for initializeCopyModel {FSDM}"><tr><td>initializeCopyModel {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Initialize a new model by copying an existing model.</h2>
+
+<h3>Description</h3>
+
+<p><code>initializeCopyModel</code> initializes a new model by creating a directory
+with the model name and copying the contents of an existing model into that
+directory. Creates and saves a model status list.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+initializeCopyModel(ModelsDir, ModelName, CopyModelName, Author,
+  CopyScenarios = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>ModelsDir</code></td>
+<td>
+<p>a string identifying the path to the models folder in which</p>
+</td></tr>
+<tr valign="top"><td><code>ModelName</code></td>
+<td>
+<p>a string identifying the model name.</p>
+</td></tr>
+<tr valign="top"><td><code>CopyModelName</code></td>
+<td>
+<p>a string identifying the name of the model to copy.</p>
+</td></tr>
+<tr valign="top"><td><code>Author</code></td>
+<td>
+<p>a string identifying the name of the author.</p>
+</td></tr>
+<tr valign="top"><td><code>CopyScenarios</code></td>
+<td>
+<p>a logical to determine whether to copy the model
+scenarios.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function initializes a new model with the given model name from an
+existing model. It does this by creating a directory with the model name and
+copying the model files for an existing model into it. It also copies and
+updates the model status list by identifying the new model name, the parent
+model (i.e. copied model) name, time and date of creation, edit and
+attribution history, and model notes. The function can be used to copy only
+the model or all the scenarios as well as the model
+</p>
+
+
+<h3>Value</h3>
+
+<p>a model status list for the model which includes information about
+the copied model.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

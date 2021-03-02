@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Creates an adjacency matrix from an FSDM relations list</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for makeAdjacencyMatrix {FSDM}"><tr><td>makeAdjacencyMatrix {FSDM}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Creates an adjacency matrix from an FSDM relations list</h2>
+
+<h3>Description</h3>
+
+<p><code>makeAdjacencyMatrix</code> creates an adjacency matrix from an FSDM relations
+list
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+makeAdjacencyMatrix(Relations_ls, Type = "Logical")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>Relations_ls</code></td>
+<td>
+<p>a list of FSDM relations</p>
+</td></tr>
+<tr valign="top"><td><code>Type</code></td>
+<td>
+<p>a string identifying the type of matrix to create. &quot;Logical&quot;
+produces a matrix where the existence of a relationship is noted with TRUE
+and FALSE. &quot;Values&quot; produces a list of two matrices where one matrix
+identifies the causal weitht of each relationship and a second matrix
+identifies the causal direction of each relationship.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function creates an adjacency matrix from an FSDM relations list. The
+adjacency matrix is a square matrix with as many rows and columns as the
+number of concepts in the model. The rows and columns are named with the
+concept variable names. The rows represent the causal side of the
+relationship and the columns represent the affected side. The values in the
+matrix are logicals with TRUE meaning that a relationship exists and FALSE
+meaning that it does not.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a matrix of logical values or string values
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FSDM</em> version 0.71 <a href="00Index.html">Index</a>]</div>
+</body></html>

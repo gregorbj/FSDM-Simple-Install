@@ -1,4 +1,7 @@
 # FSDM-Simple-Install
+
+!!NOTE: THIS APPLICATION IS BEING REVISED SUBSTANTIALLY. REVISIONS ARE BEING MADE TO THE SHINY CODE AND THE ALGORITHMS FOR COMPUTING CAUSAL EFFECTS. PLEASE STAY TUNED.
+
 This repo contains the Fuzzy System Dynamics Software with all package dependencies included in one zip archive. The purpose is to provide a installation method for computers running the Windows OS that is simpler than the method required to use the FSDM package which requires the user to install a number of R packages in addition to the R language. In contrast, to use this FSDM-Simple-Install software, the user only needs to do the following:
 1. Install the R programming environment from www.r-project.org.
 2. Download the zip archive of this repository. The downloaded file will be named 'FSDM-Simple-Install-main.zip'.
